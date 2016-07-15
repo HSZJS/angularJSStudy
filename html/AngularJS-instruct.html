@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>AngularJS指令</title>
+		<script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+	</head>
+	<!--
+    	作者：xhdhjava@163.com
+    	时间：2016-07-15
+    	描述：AngularJS指令
+    	AngularJS通过被称为 指令的新属性来扩展HTML
+    	AngularJS通过内置的指令来为应用添加功能。
+    	AngularJS允许你自定义指令
+    	AngularJS指令是扩展的HTML属性，带有前缀ng-。
+    	ng-app指令初始化一个AngulrJS应用程序。
+    	ng-init指令初始化应用程序数据。
+    	ng-model指令把元素值（比如输入域的值）绑定到应用程序。
+    -->
+	<body>
+		
+	     <!--<div ng-app="" ng-init="firstName='John'">
+			<p>在输入框中尝试输入：</p>
+			<p>姓名：
+			<input type="text" ng-model="firstName">
+		    </p>
+		    <p>你输入的为：{{firstName}}</p>
+		</div>-->
+		<!--
+        ng-app指令告诉AngularJS，<div>元素是AngularJS应用程序的“所有者”。
+        		一个网页可以包含多个运行在不同元素中的AngulrJS应用程序。
+        -->
+        <!--
+        	作者：xhdhjava@163.com
+        	时间：2016-07-15
+        	描述：数据绑定
+        	上面实例中的{{firstname}}表达式是一个AngularJS数据绑定表达式。
+        	AngularJS中的数据绑定，同步了AngularJS表达式与AngulrJS数据。
+        	{{firstName}}是通过ng-model=“firstname”进行同步。
+        	在下一个实例中，两个文本域是通过连个ng-model指令同步的：
+        -->
+        <div ng-app = "" ng-init ="quantity=1;price=5">
+        	<h2>价格计算器</h2>
+        	数量：<input type="number" ng-model="quantity"></br>
+        	价格：<input type="number" mg-model="price">
+        	<p>
+        		<b>总价:</b>{{quantity * price}}
+        	</p>
+        </div>
+	</body>
+</html>

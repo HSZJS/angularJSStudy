@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--
+	作者：xhdhjava@163.com
+	时间：2016-07-15
+	描述：在学习本教程前，您需要具备以下基础知识：HTML CSS JavaScript
+	AngularJS 历史
+	这是一个比较新的技术，版本1.0是在2012您发布的。
+	AngularJS是有Google的员工Misko Hevery从2009您开始着手开发。
+	这是一个非常好的构想，该项目目前已经由Google正式支持，有一个全职的开发团队继续开发和
+	维护这个库。
+-->
+<!--
+	作者：xhdhjava@163.com
+	时间：2016-07-15
+	描述：AngularJS简介
+	AngularJS是一个javaScript框架。它可以通过<script>标签添加到HTML页面。
+    AngularJS通过"指令"扩展了HTML,并且通过“表达式”绑定数据到HTML。
+    AngularJS是一个JavaScript框架，它是一个以JavaScript编写的库。
+    AngularJS是以一个javascr文件形式发布的，可以通过script标签添加到网页中；
+    <script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+        我们建议把脚本放在<body>元素的底部。
+    这会提高网页加载速度，因为HTML加载不受制于脚本加载。
+    各个angular.js版本下载    https://github.com/angular/angular.js/releases
+    
+    AngularJS扩展了HTML
+    AngularJS通过ng-directives扩展了HTML.
+    ng-app 指令定义一个AngularJS应用程序。
+    ng-model指令吧元素值（比如输入域的值）绑定到应用程序。
+    ng-bind指令把应用程序数据绑定到HTML视图。
+-->
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<title>angularJS学习测试</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	</head>
+	<body>
+		<div ng-app="">
+			<p>Name: <input type="text" ng-model="name"></p>
+			<h1>Hello{{name}}</h1>
+		</div>
+		<div ng-app="" ng-init="firstName='John'">
+
+            <p>姓名为 <span ng-bind="firstName"></span></p>
+  
+        </div>
+	</body>
+</html>
+<!--
+	作者：xhdhjava@163.com
+	时间：2016-07-15
+	描述：实例讲解：
+	当网页加载完毕，AngularJS，<div>元素是AngularJS应用程序的所有者。
+	ng-model指令把输入域值绑定到应用程序变量name。
+	ng-bind指令把应用程序变量name绑定到某个段落的InnerHTML.
+	
+	如果您移除了ng-app指令，HTML将直接把表达式显示出来，不会去计算表达式的结果。
+	
+	
+-->
+	<!--
+    	作者：xhdhjava@163.com
+    	时间：2016-07-15
+    	描述：什么是AngularJS?
+    	AngularJS使得开发现代的单一页面应用程序（SPAs：Single Page Applications）变得更加容易。
+    	AngularJS 	把应用程序数据绑定到HTML元素。
+    	AngularJS   可以克隆和重复HTML元素。
+    	AngularJS   可以隐藏和显示HTML元素。
+    	AngularJS   可以在HTML元素“背后”添加代码。
+    	AngularJS   支持输入验证。
+    -->
+    <!--
+    	作者：xhdhjava@163.com
+    	时间：2016-07-15
+    	描述：AngularJS指令
+    	正如您看到的，AngularJS指令是以ng作为前缀的HTML属性。
+    	ng-init指令初始化AngularJS应用程序变量。
+    	
+    	<div ng-app="" ng-init="firstName='John'">
+
+         <p>姓名为 <span ng-bind="firstName"></span></p>
+
+        < /div>
+    	
+    	HTML5允许扩展的（自制的）属性，以data开头。
+    	AngularJS属性以ng-开头， 但是您可以使用 data-ng-来让网页对
+    	HTML5有效。
+    	
+    -->
