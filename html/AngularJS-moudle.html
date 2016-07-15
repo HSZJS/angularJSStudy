@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+	作者：xhdhjava@163.com
+	时间：2016-07-15
+	描述：AngularJS ng-model指令
+	ng-model指令用于绑定应用程序数据到HTML空值器（input，select，textarea）的值
+	ng-model指令
+	ng-model指令可以将输入域的值与AngularJS创建的变量绑定
+-->
+<html>
+	<head>
+		<style>
+		body{
+			background: darkcyan;
+		}
+			input.ng-invalid {
+				
+             background-color: lightblue;
+             }
+		</style>
+		<script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+		<meta charset="UTF-8">
+		<title>AngularJS模型</title>
+	</head>
+	<body>
+		<!--<div ng-app ="myApp" ng-controller="myCtrl">
+			名字：<input ng-model="name">
+			<h1>你输入了：{{name}}</h1>
+		</div>
+	</body>-->
+	<script>
+		var app = angular.module('myApp',[]);
+		app.controller('myCtrl',function($scope){
+			$scope.name = "John Doe";
+		});
+	</script>
+	<p>修改输入框的值，标题的名字也会相应修改</p>
+	<!--
+    	作者：xhdhjava@163.com
+    	时间：2016-07-15
+    	描述：双向绑定
+    	双向绑定，在修改输入域的值时，AngularJS属性的值也将修改；
+    	
+    -->
+    <div ng-app="myApp" ng-controller="myCtrl">
+    	名字：<input ng-model="name">
+    	<h1>你输入了：{{name}}</h1>
+    </div>
+   <!--
+   	作者：xhdhjava@163.com
+   	时间：2016-07-15
+   	描述：验证用户输入
+   -->
+   <form ng-app="" name="myForm">
+   	Email:
+   	<input type="email" name="myAdress" ng-model="text">
+   	<span ng-show="MyForm.myAddress.$error.email">不是一个合法的邮箱地址</span>
+   </form>
+   <form ng-app="" name="myForm" ng-init="myText = 'test@runoob.com'">
+    Email:
+    <input type="email" name="myAddress" ng-model="myText" required></p>
+    <h1>状态</h1>
+    {{myForm.myAddress.$valid}}
+    {{myForm.myAddress.$dirty}}
+    {{myForm.myAddress.$touched}}
+</form>
+</html>
